@@ -4,6 +4,7 @@
 
 @section('content')
 
+@if($post)
 <div class="row">
     <div class="com-md-8 col-md-offset-2">
     <h1>{{ $post->title}}</h1>
@@ -11,5 +12,6 @@
     
     </div>
 </div>
+@endif
 
-@endection
+@endsection
