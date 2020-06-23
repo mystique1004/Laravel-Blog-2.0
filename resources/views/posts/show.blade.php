@@ -30,7 +30,12 @@
                     {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
                     </div>
                     <div class="col-sm-6">
-                        {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']);!!}
+                                                {{Form::open(array( 
+    'route' => array( 'posts.destroy', $post->id), 
+    'method' => 'delete', 
+    'style' => 'display:inline',
+    'onsubmit' => "return confirm('Are you sure you want to delete?')",
+))}}
 
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block'])!!}
 
